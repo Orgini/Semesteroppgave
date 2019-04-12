@@ -3,8 +3,22 @@
   <head>
     <meta charset="utf-8">
     <title>Semesteroppgave</title>
+    <link rel="stylesheet" href="semesteroppgave.css">
+    <script type="text/javascript" src="semesteroppgave.js">
+
+    </script>
   </head>
   <body>
+    <div class="nav">
+        <header>
+          <ul>
+            <li><button type="button" id="intro">Introduksjon</button></li>
+            <li><button type="button" id="overview">Oversikt</button></li>
+            <li><button type="button" id="detail">Detaljer</button></li>
+            <li><button type="button" id="compare">Sammenlign</button></li>
+          </ul>
+        </header>
+    </div>
     <div class="intro">
       <p>
           Dette er en oversikt over data samlet fra diverse kommuner.<br>
@@ -14,7 +28,7 @@
       </p>
     </div>
     <div class="overview">
-
+        <p id="kommuner"></p>
     </div>
     <div class="detail">
 
@@ -22,5 +36,8 @@
     <div class="compare">
 
     </div>
+    <footer>
+        <p>Dette er en oppgave beskrivelse i emnet INFO134 ved Universitetet i Bergen</p>
+    </footer>
   </body>
 </html>
