@@ -1,53 +1,44 @@
-//Kostruktør for alle
-function URL(urlq, url2, url3, getnames, getIDs, getInfo, load) {
-  this.url1 = url1;
-  this.url2 = url2;
-  this.url3 = url3;
-}
+function folk() {
+  var befolkning = new XMLHttpRequest;
+  befolkning.open("GET", "http://wildboy.uib.no/~tpe056/folk/104857.json", true);
 
-//Returnerer listen av alle kommunanavnene
-function getNames(url) {
-  var xhr = new XMLHttpRequest;
-  xhr.open( "GET", url);
-  xhr.onreadystatechange = function() {
-    if(this.readyState == 4 && this.status == 200){
-      console.log("Type", xhr.getResponseHeader("Content-Type"));
-      var kommune = JSON.parse(xhr.responseText)
-      console.log(kommune.region.verdi);
+  befolkning.onreadystatechange = function() {
+    if (befolkning.readyState === 4 && befolkning.status === 200) {
+      var response = JSON.parse(befolkning.responseText);
+      console.log(response)
     }
-  };
-  xhr.send();
-}
+  }
+  befolkning.send();
+};
 
-//returnerer listen av alle kommunenumrene
-function getIDs(url) {
-  var xhr = new XMLHttpRequest;
-  xhr.open( "GET", url);
-  xhr.onreadystatechange = function() {
-    if(this.readyState == 4 && this.status == 200){
-      console.log("Type", xhr.getResponseHeader("Content-Type"));
-      var kommune = JSON.parse(xhr.responseText)
-      console.log(kommune.kommunenummer);
+
+function syssel() {
+  var sysselsett = new XMLHttpRequest;
+  sysselsett.open("GET", "http://wildboy.uib.no/~tpe056/folk/100145.json", true);
+
+  sysselsett.onreadystatechange = function() {
+    if (sysselsett.readyState === 4 && sysselsett.status === 200) {
+      var response = JSON.parse(sysselsett.responseText);
+      console.log(response)
     }
-  };
-  xhr.send();
-}
+  }
+  sysselsett.send();
+};
 
-//Bruker kommunenummeret som argument og henter all informasjon om den kommunen
-function  getInfo(url, n) {
-  var xhr = new XMLHttpRequest;
-  xhr.open( "GET", url);
-  xhr.onreadystatechange = function() {
-    if(this.readyState == 4 && this.status == 200){
-      console.log("Type", xhr.getResponseHeader("Content-Type"));
-      var kommune = JSON.parse(xhr.responseText)
-      console.log(kommune.region.verdi);
+function utdanning() {
+  var utdann = new XMLHttpRequest;
+  utdann.open("GET", "http://wildboy.uib.no/~tpe056/folk/85432.json", true);
+
+  utdann.onreadystatechange = function() {
+    if (utdann.readyState === 4 && utdanning.status === 200) {
+      var response = JSON.parse(utdanning.responseText);
+      console.log(response)
     }
-  };
-  xhr.send();
-}
+  }
+  utdann.send();
+};
 
-//
-function load(url) {
+document.addEventListener("DOMContentLoaded", folk);
 
-}
+document.addEventListener("DOMContentLoaded", syssel);
+document.addEventListener("DOMcontentLoaded", utdanning);
