@@ -5,7 +5,7 @@ function Urll(url) {
         document.getElementById("here").innerHTML = "<table id='here'><th>Kommune</th><th>Kommunenummer</th><th>År</th><th>Menn</th><th>Kvinner</th></table>";
         http(function(data) {
             for (x in data.elementer) {
-                var key = Object.keys(data.elementer[x].Kvinner);
+                var år = Object.keys(data.elementer[x].Kvinner);
                 var kommune = data.elementer[x].kommunenummer;
                 var menn = data.elementer[x].Menn;
                 var kvinner = data.elementer[x].Kvinner;
@@ -16,10 +16,10 @@ function Urll(url) {
                 for (z in kvinner) {
                     var kvinne = kvinner[z];
                 } 
-                for (hei in key) {
-                    var aa = key[hei];
+                for (tall in år) {
+                    var year = år[tall];
                 }
-                document.getElementById("here").innerHTML += "<tr><td>" + x + "</td><td>" + kommune + "</td>" + " " + "<td>" + aa + "</td>" + "<td>" + mann + "</td><td>" + kvinne + "</td></tr>";
+                document.getElementById("here").innerHTML += "<tr><td>" + x + "</td><td>" + kommune + "</td>" + " " + "<td>" + year + "</td>" + "<td>" + mann + "</td><td>" + kvinne + "</td></tr>";
                 }  
         });
     };
