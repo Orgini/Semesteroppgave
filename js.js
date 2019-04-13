@@ -19,7 +19,7 @@ function Urll(url) {
                 for (tall in år) {
                     var year = år[tall];
                 }
-                document.getElementById("here").innerHTML += "<tr><td>" + x + "</td><td>" + kommune + "</td>" + " " + "<td>" + year + "</td>" + "<td>" + mann + "</td><td>" + kvinne + "</td></tr>";
+                document.getElementById("here").innerHTML += "<tr><td>" + x + "</td><td>" + kommune + "</td><td>" + year + "</td>" + "<td>" + mann + "</td><td>" + kvinne + "</td></tr>";
                 }  
         });
     };
@@ -44,7 +44,7 @@ function Urll(url) {
                     for (hei in key) {
                         var aa = key[hei];
                     }
-                    document.getElementById("here").innerHTML += "<tr><td>" + x + "</td><td>" + kommune + "</td>" + " " + "<td>" + aa + "</td>" + "<td>" + mann + "</td><td>" + kvinne + "</td></tr>";
+                    document.getElementById("here").innerHTML += "<tr><td>" + x + "</td><td>" + kommune + "</td><td>" + aa + "</td><td>" + mann + "</td><td>" + kvinne + "</td></tr>";
                 }
             }   
         });
