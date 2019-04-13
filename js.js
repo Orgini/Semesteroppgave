@@ -74,11 +74,11 @@ function Urll(url) {
     }
 };
 
-var test = new Urll(104857);
+var befolkning = new Urll(104857);
 
 function http(cb) {
     var xhr = new XMLHttpRequest();
-    var url = test;
+    var url = befolkning;
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
             var networkObj = JSON.parse(xhr.responseText);
