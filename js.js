@@ -76,13 +76,13 @@ function Urll(url) {
 
 var test = new Urll(104857);
 
-function http(callback) {
+function http(cb) {
     var xhr = new XMLHttpRequest();
     var url = test;
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
             var networkObj = JSON.parse(xhr.responseText);
-            callback(networkObj);
+            cb(networkObj);
         }
     }
     xhr.open("GET", url.url, true);
