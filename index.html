@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Tittel</title>
+    <script src="js.js"></script>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <button onclick="test.getAll()">Last inn alt</button>
+    <br>
+    
+    <button onclick="test.getIDs()">Last inn alle kommunenummer</button>
+    <br>
+    
+    <button onclick="test.getInfo(kommunenummer)">Last inn med kommunenummer</button>
+    
+    <input id="kommunenummer" value="5016">
+    
+    <br>
+    
+    <button onclick="test.getNames()">Last inn alle kommuner</button>
+    
+    <br>
+    <br>
+    
+    <div id="oversikt">
+        <table id="here">
+        </table>
+    </div>
+    <div id="detaljer">
+        
+    </div>
+</body>
+</html>
