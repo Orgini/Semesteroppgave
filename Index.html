@@ -1,43 +1,34 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Semesteroppgave</title>
-    <link rel="stylesheet" href="semesteroppgave.css">
-    <script type="text/javascript" src="semesteroppgave.js">
-
-    </script>
-  </head>
-  <body>
-    <div class="nav">
-        <header>
-          <ul>
-            <li><button type="button" id="intro">Introduksjon</button></li>
-            <li><button type="button" id="overview">Oversikt</button></li>
-            <li><button type="button" id="detail">Detaljer</button></li>
-            <li><button type="button" id="compare">Sammenlign</button></li>
-          </ul>
-        </header>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Tittel</title>
+    <script src="js2.js"></script>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <button onclick="befolkning.getAll()">Last inn alt</button>
+    <br>
+    <button onclick="befolkning.getIDs()">Last inn alle kommunenummer</button>
+    <br>
+    
+    <button onclick="befolkning.getInfo()">Last inn med kommunenummer</button>
+    
+    <input id="kommunenummer" value="5016">
+    
+    <br>
+    
+    <button onclick="befolkning.getNames()">Last inn alle kommuner</button>
+    
+    <br>
+    <br>
+    
+    <div id="oversikt">
+        <table id="here">
+        </table>
     </div>
-    <div class="intro">
-      <p>
-          Dette er en oversikt over data samlet fra diverse kommuner.<br>
-          Dataene er hentet fra <a href="https://www.ssb.no/">ssb sine nettsider.</a><br>
-          Dataene kan inneholde feil.
-
-      </p>
+    <div id="detaljer">
+        
     </div>
-    <div class="overview">
-        <p id="kommuner"></p>
-    </div>
-    <div class="detail">
-
-    </div>
-    <div class="compare">
-
-    </div>
-    <footer>
-        <p>Dette er en oppgave beskrivelse i emnet INFO134 ved Universitetet i Bergen</p>
-    </footer>
-  </body>
+</body>
 </html>
