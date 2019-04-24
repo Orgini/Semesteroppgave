@@ -3,13 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Tittel</title>
-    <script src="js2.js"></script>
-    <link rel="stylesheet" href="css.css">
+    <script src="befolkning.js"></script>
+    <script src="syssel.js"></script>
+    <script src="utdanning.js"></script>
+    <link rel="stylesheet" href="semester.css">
 </head>
 <body>
     <button onclick="befolkning.getAll()">Last inn alt</button>
+    
     <br>
+    
     <button onclick="befolkning.getIDs()">Last inn alle kommunenummer</button>
+    
     <br>
     
     <button onclick="befolkning.getInfo()">Last inn med kommunenummer</button>
@@ -23,12 +28,24 @@
     <br>
     <br>
     
+    <button onclick="befolkning.sammenligning();">Sammenligne</button>
+    <input id="kNummerEn" value="0118">
+    <input id="kNummerTo" value="0127">
+    
+    <br>
+    <br>
+    
     <div id="oversikt">
-        <table id="here">
+        <table id="overview">
         </table>
     </div>
+    
     <div id="detaljer">
-        
+        <table id="detail">
+        </table>
     </div>
+    
+    <div id="sammenligning"></div>
+    
 </body>
 </html>
