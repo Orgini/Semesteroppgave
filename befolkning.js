@@ -46,17 +46,17 @@ function Urll(url) {
                 for (tall in år) {
                     var year = år[tall];
                 }
-                for (var row in liste) {
-                    var testing1 = liste[0];
-                    var testing2 = liste[1];
+                for (var row in listeSyssel) {
+                    var testing1 = listeSyssel[0];
+                    var testing2 = listeSyssel[1];
                 }
-                for (var row in listee) {
-                    var fagM = listee[0];
-                    var fagK = listee[1];
-                    var uniMK = listee[2];
-                    var uniKK = listee[3];
-                    var uniML = listee[4];
-                    var uniKL = listee[5];
+                for (var row in listeUtdanning) {
+                    var fagM = listeUtdanning[0];
+                    var fagK = listeUtdanning[1];
+                    var uniMK = listeUtdanning[2];
+                    var uniKK = listeUtdanning[3];
+                    var uniML = listeUtdanning[4];
+                    var uniKL = listeUtdanning[5];
                 }
                 document.getElementById("detail").innerHTML += "<tr><td>" + x + "</td><td>" + kommune + "</td><td>" + year + "</td><td>" + mann + "</td><td>" + kvinne + "</td><td>" + fagM + "</td><td>" + fagK + "</td><td>" + uniMK + "</td><td>" + uniKK + "</td><td>" + uniML + "</td><td>" + uniKL + "</td></tr>";
             }
@@ -91,18 +91,18 @@ function Urll(url) {
                         var year = år[tall];
                     }
                     
-                    for (var row in liste) {
-                        var testing1 = liste[0];
-                        var testing2 = liste[1];
+                    for (var row in listeSyssel) {
+                        var testing1 = listeSyssel[0];
+                        var testing2 = listeSyssel[1];
                     }
                     
-                    for (var row in listee) {
-                        var fagM = listee[0];
-                        var fagK = listee[1];
-                        var uniMK = listee[2];
-                        var uniKK = listee[3];
-                        var uniML = listee[4];
-                        var uniKL = listee[5];
+                    for (var row in listeUtdanning) {
+                        var fagM = listeUtdanning[0];
+                        var fagK = listeUtdanning[1];
+                        var uniMK = listeUtdanning[2];
+                        var uniKK = listeUtdanning[3];
+                        var uniML = listeUtdanning[4];
+                        var uniKL = listeUtdanning[5];
                     }
                     document.getElementById("detail").innerHTML += "<tr><td>" + x + "</td><td>" + kommune + "</td><td>" + year + "</td><td>" + mann + "</td><td>" + kvinne + "</td><td>" + fagM + "</td><td>" + fagK + "</td><td>" + uniMK + "</td><td>" + uniKK + "</td><td>" + uniML + "</td><td>" + uniKL + "</td></tr>";
                 }
