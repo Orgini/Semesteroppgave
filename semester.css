@@ -1,9 +1,24 @@
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+
+#greaterOrEqual {
+    margin:0.1em;
+    font-size: 1.4em;
+}
+
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  
+
 }
 
 li {
@@ -21,7 +36,7 @@ li a {
 li a:hover {
 ;
 }
-button {
+div#headerbtn button {
   background: grey;
   border: 10px;
   border-color: black;
@@ -30,8 +45,11 @@ button {
 
   font-size: 3em;
 }
-button:hover {
+div#headerbtn button:hover {
   color: black;
   background-color: white;
 }
 
+div.overview, div.detail, div.compare {
+  display:none;
+}
