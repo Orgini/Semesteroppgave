@@ -6,7 +6,7 @@
     <script src="befolkning.js"></script>
     <script src="syssel.js"></script>
     <script src="utdanning.js"></script>
-    <script src="show_hide.js"></script>
+    <script src="css.js"></script>
 
 
     <link rel="stylesheet" href="semester.css">
@@ -32,16 +32,28 @@
   </p>
 </div>
 
-<div class="overview" id="overview">
-  <p>overview</p>
+<div class="overview">
+  <table id="overview">
+
+  </table>
 </div>
 
 <div class="detail">
-  <p>detail</p>
+  <button onclick="befolkning.getInfo()">Last inn med kommunenummer</button>
+
+  <input id="kommunenummer" value="">
+  <table id="detail">
+
+  </table>
 </div>
 
 <div class="compare">
-  <p>compare</p>
+  <button onclick="befolkning.sammenligning();">Sammenligne</button>
+  <input id="kNummerEn" value="0118">
+  <input id="kNummerTo" value="0127">
+  <div id="sammenligning">
+
+  </div>
 </div>
 
 <div>
