@@ -109,6 +109,6 @@ function http1(cb) {
             cb(networkObj);
         }
     }
-    xhr.open("GET", url.url, true);
+    xhr.open("GET", url.url, false);
     xhr.send();
 };
