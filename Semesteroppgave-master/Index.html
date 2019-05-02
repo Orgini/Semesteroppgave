@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Tittel</title>
+    <script src="befolkning.js"></script>
+    <script src="syssel.js"></script>
+    <script src="utdanning.js"></script>
+    <script src="show_hide.js"></script>
+
+
+    <link rel="stylesheet" href="semester.css">
+</head>
+<body style="overflow-x:auto;"> <!--om det kommer et for bredt element vil det komme en scrollbar for å gjøre det lettere -->
+  <div class="body">
+
+
+      <div class="nav" id="headerbtn">
+          <header>
+            <ul>
+              <li><button type="button" onclick="show_intro()">Introduksjon</button></li>
+              <li><button type="button" onclick="show_overview(); befolkning.oversikt()">Oversikt</button></li>
+              <li><button type="button" onclick="show_detail()">Detaljer</button></li>
+              <li><button type="button" onclick="show_compare()">Sammenlign</button></li>
+            </ul>
+          </header>
+      </div>
+
+          <div class="intro">
+            <p>
+            Dette er en oversikt over data samlet fra diverse kommuner.<br>
+                  Dataene er hentet fra <a href="https://www.ssb.no/">ssb sine nettsider.</a><br>
+                  Dataene kan inneholde feil.
+            </p>
+          </div>
+
+    <div class="overview">
+        <table id="overview">
+
+        </table>
+    </div>
+
+          <div class="detail">
+              <button onclick="befolkning.getInfo()">Last inn med kommunenummer</button>
+
+              <input id="kommunenummer" value="">
+              <table id="detail">
+
+              </table>
+          </div>
+
+            <div class="compare">
+                <button onclick="befolkning.sammenligning();">Sammenligne</button>
+                <input id="kNummerEn" value="0118">
+                <input id="kNummerTo" value="0127">
+                <div id="sammenligning">
+
+            </div>
+    </div>
+
+      <div class="footer">
+        <footer>
+              Dette er en oppgavebeskrivelse i emnet INFO134 ved Universitetet i Bergen.
+        </footer>
+      </div>
+    </div>
+</body>
+</html>
